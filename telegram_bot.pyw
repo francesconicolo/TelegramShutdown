@@ -21,7 +21,7 @@ def foto(update,context):
       cap = cv2.VideoCapture(1) 
       ret,frame = cap.read() 
       cv2.imshow('img1',frame)   
-      cv2.imwrite('./c1.png',frame)
+      cv2.imwrite('./temp.png',frame)
       update.message.reply_text("Foto in arrivo...")
       update.message.reply_photo(photo=open('./temp.png', 'rb'))
       cap.release()
